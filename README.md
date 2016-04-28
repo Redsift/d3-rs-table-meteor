@@ -1,4 +1,6 @@
-# Installation
+# d3-rs-table-meteor
+
+## Installation
 
 ```shell
 > git clone --recursive https://github.com/martinhecher/d3-rs-table-meteor.git
