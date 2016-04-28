@@ -1,7 +1,9 @@
 import { Template } from 'meteor/templating';
-import d3 from 'd3';
-import { html as table } from '../imports/d3-rs-table/index'; // import as ES6 library
-// import { html as table } from '../imports/d3-rs-table'; // import as UMD library
+import { select as d3select } from 'd3-selection';
+import { timer as d3timer } from 'd3-timer';
+
+import { html } from '../imports/d3-rs-table/index'; // import as ES6 library
+// import { html } from '../imports/d3-rs-table'; // import as UMD library
 
 import './main.html';
 
@@ -9,13 +11,13 @@ Template.table.onRendered(() => {
     let size = 50,
         runs = 100;
 
-    let el = d3.select('#tbl'),
-        tbl = table(true).text((d) => d ? d.toFixed(2) : null);
+    let el = d3select('#tbl'),
+        tbl = html(true).text((d) => d ? d.toFixed(2) : null);
 
     time(el, tbl, size, runs, false)
-        .then(results.bind(results, d3.select('#regular'), 'regular'))
+        .then(results.bind(results, d3select('#regular'), 'regular'))
         .then(() => time(el, tbl, size, runs, true))
-        .then(results.bind(results, d3.select('#ragged'), 'ragged'));
+        .then(results.bind(results, d3select('#ragged'), 'ragged'));
 });
 
 function makeRandom(rowso, colso, rng) {
@@ -89,7 +91,7 @@ function time(el, tbl, sz, runs, rng) {
         let results = new Array(runs + 1);
         results[0] = ['# run', 'ms', 'rows cfg=' + (sz * sz)];
         let i = 0;
-        let t = d3.timer(() => {
+        let t = d3timer(() => {
             let test = makeRandom(sz, sz, rng);
             let _start = performance.now();
             // timed function
