@@ -1,0 +1,3 @@
+[submodule "d3-rs-table"]
+	path = d3-rs-table
+	url = git@github.com:Redsift/d3-rs-table.git

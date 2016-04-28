@@ -1,0 +1,11 @@
+{
+  "name": "d3-es6-test",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "build": "^0.1.4",
+    "meteor-node-stubs": "~0.2.0"
+  }
+}
