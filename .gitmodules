@@ -1,3 +1,6 @@
 [submodule "d3-rs-table"]
 	path = d3-rs-table
 	url = git@github.com:Redsift/d3-rs-table.git
+[submodule "imports/d3-rs-table"]
+	path = imports/d3-rs-table
+	url = git@github.com:Redsift/d3-rs-table.git

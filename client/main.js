@@ -1,7 +1,6 @@
 import { Template } from 'meteor/templating';
 import d3 from 'd3';
-// import {html} from 'd3-rs-table';
-import { html as table } from './table'
+import { html as table } from '../imports/d3-rs-table';
 
 import './main.html';
 
