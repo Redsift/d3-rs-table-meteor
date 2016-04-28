@@ -1,5 +1,5 @@
 {
-  "name": "d3-es6-test",
+  "name": "d3-rs-table-meteor",
   "private": true,
   "scripts": {
     "start": "meteor run"
@@ -7,5 +7,19 @@
   "dependencies": {
     "build": "^0.1.4",
     "meteor-node-stubs": "~0.2.0"
-  }
+  },
+  "version": "0.1.0",
+  "description": "Testing import of 'd3-rs-table' into meteor project.",
+  "main": "./server/main.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinhecher/d3-rs-table-meteor.git"
+  },
+  "author": "Martin Hecher <martin@redsift.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martinhecher/d3-rs-table-meteor/issues"
+  },
+  "homepage": "https://github.com/martinhecher/d3-rs-table-meteor#readme"
 }
